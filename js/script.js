@@ -6,12 +6,7 @@ import { getDatabase, ref, push, set, onChildAdded }
 // Your web app's Firebase configuration
 
 const firebaseConfig = {
-    apiKey: "AIzaSyC5uRJE3mU2ulyFJLrVcB5myysXvOEO_Mk",
-    authDomain: "gsdev27-8977b.firebaseapp.com",
-    projectId: "gsdev27-8977b",
-    storageBucket: "gsdev27-8977b.appspot.com",
-    messagingSenderId: "392621747268",
-    appId: "1:392621747268:web:4ead4eda407838a5db2011",
+
   };
  
   // Initialize Firebase
