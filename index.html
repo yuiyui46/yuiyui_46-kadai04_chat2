@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>健康相談チャットアプリ</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>健康相談</h1>
+    <!-- コンテンツ表示画面 -->
+    <div class="chat-container">
+        <!-- 各場所にidを設定しましょう -->
+        <div class="input-group">
+            <input type="text" id="uname" placeholder="名前を入力してください">
+        </div>
+        <div class="input-group">
+            <label for="gender">性別:</label>
+            <select id="gender">
+                <option value="">選択してください</option>
+                <option value="男性">男性</option>
+                <option value="女性">女性</option>
+                <option value="その他">その他</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <label for="age">年代:</label>
+            <select id="age">
+                <option value="">選択してください</option>
+                <option value="10代">10代</option>
+                <option value="20代">20代</option>
+                <option value="30代">30代</option>
+                <option value="40代">40代</option>
+                <option value="50代">50代</option>
+                <option value="60代以上">60代以上</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <h2>身体の症状を選択してください</h2>
+            <label><input type="checkbox" name="symptom" value="頭痛"> 頭痛</label>
+            <label><input type="checkbox" name="symptom" value="発熱"> 発熱</label>
+            <label><input type="checkbox" name="symptom" value="咳"> 咳</label>
+            <label><input type="checkbox" name="symptom" value="吐き気/嘔吐"> 吐き気/嘔吐</label>
+            <label><input type="checkbox" name="symptom" value="その他身体症状"> その他身体症状</label>
+            <label><input type="checkbox" name="symptom" value="その他精神症状"> その他精神症状</label>
+        </div>
+        <div class="input-group">
+            <label for="free-text">具体的な症状:</label>
+            <textarea id="free-text" placeholder="文章を入力してください"></textarea>
+        </div>
+        <button id="send">送信</button>
+        <div id="output" style="overflow: auto;"></div>
+    </div>
+
+    <script src="js/jquery-2.1.3.min.js"> </script>
+    <script type="module" src="js/script.js"></script>
+</body>
+</html>
+
