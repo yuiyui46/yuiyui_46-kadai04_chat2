@@ -10,7 +10,6 @@ body {
   margin: 0;
   padding: 20px;
   box-sizing: border-box;
-  overflow: hidden; /* スクロールバーが表示されないように */
 }
 
 h1 {
@@ -33,8 +32,13 @@ h1 {
   height: 80vh; /* 全体の高さを固定 */
 }
 
+.input-section {
+  overflow-y: auto;
+  max-height: 30%; /* 入力セクションの高さを減らす */
+}
+
 .input-group {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 h2 {
@@ -45,14 +49,14 @@ h2 {
 
 label {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   font-size: 1em;
   color: #555555;
 }
 
 input[type="text"], textarea, select {
   width: 100%;
-  padding: 10px;
+  padding: 8px;
   margin-top: 5px;
   border: 1px solid #cccccc;
   border-radius: 8px;
@@ -60,14 +64,14 @@ input[type="text"], textarea, select {
 }
 
 textarea {
-  height: 80px;
+  height: 60px;
   resize: none;
 }
 
 button {
   background-color: #ff6f61;
   color: white;
-  padding: 10px 15px;
+  padding: 8px 15px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -75,6 +79,7 @@ button {
   font-size: 1.1em;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s;
+  margin-top: 10px;
 }
 
 button:hover {
@@ -83,11 +88,11 @@ button:hover {
 
 #output {
   flex-grow: 1;
-  margin-top: 20px;
-  max-height: calc(100% - 300px); /* 上部の入力フィールドの高さを考慮 */
+  margin-top: 10px;
   overflow-y: auto; /* 縦スクロールを許可 */
   border-top: 1px solid #eeeeee;
   padding-top: 10px;
+  max-height: 70%; /* 出力セクションの高さを増やす */
 }
 
 .msg {
@@ -103,22 +108,21 @@ button:hover {
 /* Responsive Design */
 @media (max-width: 600px) {
   .chat-container {
-      max-width: 100%;
-      padding: 15px;
-      height: 90vh; /* スマホ画面の高さに対応 */
-    }
+    max-width: 100%;
+    padding: 15px;
+    height: 90vh; /* スマホ画面の高さに対応 */
   }
 
   button {
-      font-size: 1em;
-      padding: 10px;
+    font-size: 1em;
+    padding: 10px;
   }
 
   h1 {
-      font-size: 1.5em;
+    font-size: 1.5em;
   }
 
   h2 {
-      font-size: 1.1em;
+    font-size: 1.1em;
   }
 }
